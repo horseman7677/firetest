@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ANDROID DEV/BaseConverter" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ANDROID DEV/Calculator" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ANDROID DEV/Covid" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ANDROID DEV/Horseman" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ANDROID DEV/WeatherForU" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ANDROID DEV/stopwatch" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WEB DEV/DJANGO/blogs" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WEB DEV/DJANGO/weather" vcs="Git" />
+  </component>
+</project>

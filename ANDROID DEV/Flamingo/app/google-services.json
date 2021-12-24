@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "529999543058",
+    "project_id": "flamingo-9ac7f",
+    "storage_bucket": "flamingo-9ac7f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:529999543058:android:8337895d4f8098265f51cb",
+        "android_client_info": {
+          "package_name": "com.horseman.flamingo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "529999543058-p1lvn8df1die2ecfadq6std5v0auldoq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlhqtKe0Wr5JMhzgjhpnSqMvnmT2jo4Io"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "529999543058-p1lvn8df1die2ecfadq6std5v0auldoq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

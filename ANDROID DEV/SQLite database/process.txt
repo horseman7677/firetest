@@ -1,0 +1,76 @@
+1st:
+create package (params & data) in java folder.
+
+2nd:
+create java file(MyDbHandler) in data package & extends to SQLiteOpenHelper.
+
+3rd:
+create java file(Params) which store database things like name,version,attributes etc, 
+in futur we can change also.
+
+public class Params {
+    public static final int DB_VERSION = 1;
+    public static final String DB_NAME = "contacts_db";
+    public static final String TABLE_NAME = "contacts_table";
+
+    // key or variable which we have to store in our database.
+    public static final String KEY_ID = "id";
+    public static final String KEY_NAME = "name";
+    public static final String KEY_PHONE = "phone_number";
+}
+
+4th:
+create constructor of MyDatabaseHandler
+ public MyDbHandler(Context context) {
+        super(context, Params.DB_NAME, null, Params.DB_VERSION);
+        
+    }
+
+5th:
+override two method ( onCreate & onUpgrade )
+ @Override
+    public void onCreate(SQLiteDatabase db) {
+        String create = " CREATE TABLE " + Params.TABLE_NAME + " ("
+                + Params.KEY_ID + " INTEGER PRIMARY KEY, " + Params.KEY_NAME
+                + " TEXT, " + Params.KEY_PHONE + " TEXT " + ") ";
+        Log.d("myDB","created"+create);
+        db.execSQL(create);
+
+    }
+
+6th:
+create package ( model ) in java folder & inside it create 
+java file ( contact.java ) then constructor.
+
+public class Contact {
+    private int id;
+    private String name;
+    private String phoneNumber;
+
+    public Contact( String name, String phoneNumber) {
+        							//3 constructor are there
+								  called constructor overloading
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+    }
+
+ public Contact(int id, String name, String phoneNumber) {
+        this.id = id;
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+    }
+    public Contact(){
+        
+    }
+
+and last getter setter method......
+
+7th:
+create object of MyDbHandler in mainActivity....
+
+8th:
+create a method ( addContact ) in MyDbHandler 
+
+9th:
+insert elements to database
+

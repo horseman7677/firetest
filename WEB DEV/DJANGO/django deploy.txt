@@ -1,0 +1,820 @@
+C:\Users\Horseman\Desktop\blogs>heroku login
+heroku: Press any key to open up the browser to login or q to exit: 
+Opening browser to https://cli-auth.heroku.com/auth/cli/browser/aff98813-e781-4b48-9b31-76408b76b3e0?requestor=SFMyNTY.g2gDbQAAAA4xMTcuMjAwLjk1LjI0NG4GAEiOG_t6AWIAAVGA.BXorPKoMcJFjzzxmT0Km51l5PQU_3E40xdgENO8dcJ0
+Logging in... done
+Logged in as horsemangrey@gmail.com
+
+C:\Users\Horseman\Desktop\blogs> git init
+Initialized empty Git repository in C:/Users/Horseman/Desktop/blogs/.git/
+
+C:\Users\Horseman\Desktop\blogs>heroku git:remote -a rahul7677
+set git remote heroku to https://git.heroku.com/rahul7677.git
+
+C:\Users\Horseman\Desktop\blogs>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Procfile
+        blogs/
+        db.sqlite3
+        manage.py
+        posts/
+        requirements.txt
+        static/
+        templates/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\Horseman\Desktop\blogs>git add .
+
+C:\Users\Horseman\Desktop\blogs>git commit -am"Initial release" 
+[master (root-commit) 1382154] Initial release
+ 41 files changed, 465 insertions(+)
+ create mode 100644 Procfile
+ create mode 100644 blogs/__init__.py
+ create mode 100644 blogs/__pycache__/__init__.cpython-39.pyc
+ create mode 100644 blogs/__pycache__/admin.cpython-39.pyc
+ create mode 100644 blogs/__pycache__/apps.cpython-39.pyc
+ create mode 100644 blogs/__pycache__/models.cpython-39.pyc
+ create mode 100644 blogs/__pycache__/urls.cpython-39.pyc
+ create mode 100644 blogs/__pycache__/views.cpython-39.pyc
+ create mode 100644 blogs/admin.py
+ create mode 100644 blogs/apps.py
+ create mode 100644 blogs/migrations/0001_initial.py
+ create mode 100644 blogs/migrations/0002_rename_blog_name_header_title_name.py
+ create mode 100644 blogs/migrations/0003_rename_header_title_header.py
+ create mode 100644 blogs/migrations/0004_post.py
+ create mode 100644 blogs/migrations/0005_auto_20210730_1202.py
+ create mode 100644 blogs/migrations/__init__.py
+ create mode 100644 blogs/migrations/__pycache__/0001_initial.cpython-39.pyc
+ create mode 100644 blogs/migrations/__pycache__/0002_rename_blog_name_header_title_name.cpython-39.pyc
+ create mode 100644 blogs/migrations/__pycache__/0003_rename_header_title_header.cpython-39.pyc
+ create mode 100644 blogs/migrations/__pycache__/0004_post.cpython-39.pyc
+ create mode 100644 blogs/migrations/__pycache__/0005_auto_20210730_1202.cpython-39.pyc
+ create mode 100644 blogs/migrations/__pycache__/__init__.cpython-39.pyc
+ create mode 100644 blogs/models.py
+ create mode 100644 blogs/tests.py
+ create mode 100644 blogs/urls.py
+ create mode 100644 blogs/views.py
+ create mode 100644 db.sqlite3
+ create mode 100644 manage.py
+ create mode 100644 posts/__init__.py
+ create mode 100644 posts/__pycache__/__init__.cpython-39.pyc
+ create mode 100644 posts/__pycache__/settings.cpython-39.pyc
+ create mode 100644 posts/__pycache__/urls.cpython-39.pyc
+ create mode 100644 posts/__pycache__/wsgi.cpython-39.pyc
+ create mode 100644 posts/asgi.py
+ create mode 100644 posts/settings.py
+ create mode 100644 posts/urls.py
+ create mode 100644 posts/wsgi.py
+ create mode 100644 requirements.txt
+ create mode 100644 static/style.css
+ create mode 100644 templates/index.html
+ create mode 100644 templates/post.html
+
+C:\Users\Horseman\Desktop\blogs>git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+C:\Users\Horseman\Desktop\blogs>git push heroku master
+Enumerating objects: 49, done.
+Counting objects: 100% (49/49), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (45/45), done.
+Writing objects: 100% (49/49), 27.36 KiB | 849.00 KiB/s, done.
+Total 49 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> Building on the Heroku-20 stack
+remote: -----> Determining which buildpack to use for this app
+remote: -----> Python app detected
+remote: -----> No Python version was specified. Using the buildpack default: python-3.9.6
+remote:        To use a different version, see: https://devcenter.heroku.com/articles/python-runtimes
+remote: -----> Installing python-3.9.6
+remote: -----> Installing pip 20.2.4, setuptools 47.1.1 and wheel 0.36.2
+remote: -----> Installing SQLite3
+remote: -----> Installing requirements with pip
+remote:        Collecting Django
+remote:          Downloading Django-3.2.5-py3-none-any.whl (7.9 MB)
+remote:        Collecting sqlparse>=0.2.2
+remote:          Downloading sqlparse-0.4.1-py3-none-any.whl (42 kB)
+remote:        Collecting pytz
+remote:          Downloading pytz-2021.1-py2.py3-none-any.whl (510 kB)
+remote:        Collecting asgiref<4,>=3.3.2
+remote:          Downloading asgiref-3.4.1-py3-none-any.whl (25 kB)
+remote:        Installing collected packages: sqlparse, pytz, asgiref, Django
+remote:        Successfully installed Django-3.2.5 asgiref-3.4.1 pytz-2021.1 sqlparse-0.4.1
+remote: -----> $ python manage.py collectstatic --noinput
+remote:        Traceback (most recent call last):
+remote:          File "/tmp/build_c1e791c4/manage.py", line 22, in <module>
+remote:            main()
+remote:          File "/tmp/build_c1e791c4/manage.py", line 18, in main
+remote:            execute_from_command_line(sys.argv)
+remote:          File "/app/.heroku/python/lib/python3.9/site-packages/django/core/management/__init__.py", line 419, in execute_from_command_line
+remote:            utility.execute()
+remote:          File "/app/.heroku/python/lib/python3.9/site-packages/django/core/management/__init__.py", line 413, in execute
+remote:            self.fetch_command(subcommand).run_from_argv(self.argv)
+remote:          File "/app/.heroku/python/lib/python3.9/site-packages/django/core/management/base.py", line 354, in run_from_argv
+remote:            self.execute(*args, **cmd_options)
+remote:          File "/app/.heroku/python/lib/python3.9/site-packages/django/core/management/base.py", line 398, in execute
+remote:            output = self.handle(*args, **options)
+remote:          File "/app/.heroku/python/lib/python3.9/site-packages/django/contrib/staticfiles/management/commands/collectstatic.py", line 187, in handle  
+remote:            collected = self.collect()
+remote:          File "/app/.heroku/python/lib/python3.9/site-packages/django/contrib/staticfiles/management/commands/collectstatic.py", line 114, in collect 
+remote:            handler(path, prefixed_path, storage)
+remote:          File "/app/.heroku/python/lib/python3.9/site-packages/django/contrib/staticfiles/management/commands/collectstatic.py", line 338, in copy_file
+remote:            if not self.delete_file(path, prefixed_path, source_storage):
+remote:          File "/app/.heroku/python/lib/python3.9/site-packages/django/contrib/staticfiles/management/commands/collectstatic.py", line 248, in delete_file
+remote:            if self.storage.exists(prefixed_path):
+remote:          File "/app/.heroku/python/lib/python3.9/site-packages/django/core/files/storage.py", line 318, in exists
+remote:            return os.path.exists(self.path(name))
+remote:          File "/app/.heroku/python/lib/python3.9/site-packages/django/contrib/staticfiles/storage.py", line 38, in path
+remote:            raise ImproperlyConfigured("You're using the staticfiles app "
+remote:        django.core.exceptions.ImproperlyConfigured: You're using the staticfiles app without having set the STATIC_ROOT setting to a filesystem path. 
+remote:
+remote:  !     Error while running '$ python manage.py collectstatic --noinput'.
+remote:        See traceback above for details.
+remote:
+remote:        You may need to update application code to resolve this error.
+remote:        Or, you can disable collectstatic for this application:
+remote:
+remote:           $ heroku config:set DISABLE_COLLECTSTATIC=1
+remote:
+remote:        https://devcenter.heroku.com/articles/django-assets
+remote:  !     Push rejected, failed to compile Python app.
+remote: 
+remote:  !     Push failed
+remote: Verifying deploy...
+remote: 
+remote: !       Push rejected to rahul7677.
+remote:
+To https://git.heroku.com/rahul7677.git
+ ! [remote rejected] master -> master (pre-receive hook declined)
+error: failed to push some refs to 'https://git.heroku.com/rahul7677.git'
+
+C:\Users\Horseman\Desktop\blogs>heroku config:set DISABLE_COLLECTSTATIC=1
+Setting DISABLE_COLLECTSTATIC and restarting ⬢ rahul7677... done, v3
+DISABLE_COLLECTSTATIC: 1
+
+C:\Users\Horseman\Desktop\blogs>git push heroku master
+Enumerating objects: 49, done.
+Counting objects: 100% (49/49), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (45/45), done.
+Writing objects: 100% (49/49), 27.36 KiB | 1.09 MiB/s, done.
+Total 49 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> Building on the Heroku-20 stack
+remote: -----> Determining which buildpack to use for this app
+remote: -----> Python app detected
+remote: -----> No Python version was specified. Using the buildpack default: python-3.9.6
+remote:        To use a different version, see: https://devcenter.heroku.com/articles/python-runtimes
+remote: -----> Installing python-3.9.6
+remote: -----> Installing pip 20.2.4, setuptools 47.1.1 and wheel 0.36.2
+remote: -----> Installing SQLite3
+remote: -----> Installing requirements with pip
+remote:        Collecting Django
+remote:          Downloading Django-3.2.5-py3-none-any.whl (7.9 MB)
+remote:        Collecting sqlparse>=0.2.2
+remote:          Downloading sqlparse-0.4.1-py3-none-any.whl (42 kB)
+remote:        Collecting asgiref<4,>=3.3.2
+remote:          Downloading asgiref-3.4.1-py3-none-any.whl (25 kB)
+remote:        Collecting pytz
+remote:          Downloading pytz-2021.1-py2.py3-none-any.whl (510 kB)
+remote:        Installing collected packages: sqlparse, asgiref, pytz, Django
+remote:        Successfully installed Django-3.2.5 asgiref-3.4.1 pytz-2021.1 sqlparse-0.4.1
+remote: -----> Skipping Django collectstatic since the env var DISABLE_COLLECTSTATIC is set.
+remote: -----> Discovering process types
+remote:        Procfile declares types -> web
+remote:
+remote: -----> Compressing...
+remote:        Done: 58.3M
+remote: -----> Launching...
+remote:        Released v6
+remote:        https://rahul7677.herokuapp.com/ deployed to Heroku
+remote:
+remote:  !
+remote:  ! ## Warning - The same version of this code has already been built: 1382154bd0d81c78922ec01df70ff49aaf650f73
+remote:  !
+remote:  ! We have detected that you have triggered a build from source code with version 1382154bd0d81c78922ec01df70ff49aaf650f73
+remote:  ! at least twice. One common cause of this behavior is attempting to deploy code from a different branch.
+remote:  !
+remote:  ! If you are developing on a branch and deploying via git you must run:
+remote:  !
+remote:  !     git push heroku <branchname>:main
+remote:  !
+remote:  ! This article goes into details on the behavior:
+remote:  !   https://devcenter.heroku.com/articles/duplicate-build-version
+remote:
+remote: Verifying deploy... done.
+To https://git.heroku.com/rahul7677.git
+ * [new branch]      master -> master
+
+C:\Users\Horseman\Desktop\blogs>git commit -am"update procfile" 
+[master c1e6ebb] update procfile
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\Horseman\Desktop\blogs>git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+C:\Users\Horseman\Desktop\blogs>git push heroku master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 318 bytes | 106.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> Building on the Heroku-20 stack
+remote: -----> Using buildpack: heroku/python
+remote: -----> Python app detected
+remote: -----> No Python version was specified. Using the same version as the last build: python-3.9.6
+remote:        To use a different version, see: https://devcenter.heroku.com/articles/python-runtimes
+remote: -----> No change in requirements detected, installing from cache
+remote: -----> Using cached install of python-3.9.6
+remote: -----> Installing pip 20.2.4, setuptools 47.1.1 and wheel 0.36.2
+remote: -----> Installing SQLite3
+remote: -----> Installing requirements with pip
+remote: -----> Skipping Django collectstatic since the env var DISABLE_COLLECTSTATIC is set.
+remote: -----> Discovering process types
+remote:        Procfile declares types -> web
+remote:
+remote: -----> Compressing...
+remote:        Done: 58.3M
+remote: -----> Launching...
+remote:        Released v7
+remote:        https://rahul7677.herokuapp.com/ deployed to Heroku
+remote:
+remote: Verifying deploy... done.
+To https://git.heroku.com/rahul7677.git
+   1382154..c1e6ebb  master -> master
+
+C:\Users\Horseman\Desktop\blogs>heroku logs --tail
+2021-07-31T05:52:27.108901+00:00 app[api]: Initial release by user horsemangrey@gmail.com
+2021-07-31T05:52:27.108901+00:00 app[api]: Release v1 created by user horsemangrey@gmail.com
+2021-07-31T05:52:27.362095+00:00 app[api]: Enable Logplex by user horsemangrey@gmail.com
+2021-07-31T05:52:27.362095+00:00 app[api]: Release v2 created by user horsemangrey@gmail.com
+2021-07-31T05:54:05.000000+00:00 app[api]: Build started by user horsemangrey@gmail.com
+2021-07-31T05:54:23.000000+00:00 app[api]: Build failed -- check your build output: https://dashboard.heroku.com/apps/9866c90b-422f-4eee-86d6-cf0d7277fcf9/activity/builds/0722ebac-f3af-412a-b31c-9f48b8f9890a
+2021-07-31T05:55:12.156762+00:00 app[api]: Set DISABLE_COLLECTSTATIC config vars by user horsemangrey@gmail.com
+2021-07-31T05:55:12.156762+00:00 app[api]: Release v3 created by user horsemangrey@gmail.com
+2021-07-31T05:55:20.000000+00:00 app[api]: Build started by user horsemangrey@gmail.com
+2021-07-31T05:55:54.909675+00:00 app[api]: Attach DATABASE (@ref:postgresql-rigid-23468) by user horsemangrey@gmail.com
+2021-07-31T05:55:54.909675+00:00 app[api]: Running release v4 commands by user horsemangrey@gmail.com
+2021-07-31T05:55:54.920002+00:00 app[api]: @ref:postgresql-rigid-23468 completed provisioning, setting DATABASE_URL. by user horsemangrey@gmail.com
+2021-07-31T05:55:54.920002+00:00 app[api]: Release v5 created by user horsemangrey@gmail.com
+2021-07-31T05:55:55.188220+00:00 app[api]: Release v6 created by user horsemangrey@gmail.com
+2021-07-31T05:55:55.188220+00:00 app[api]: Deploy 1382154b by user horsemangrey@gmail.com
+2021-07-31T05:55:55.200183+00:00 app[api]: Scaled to web@1:Free by user horsemangrey@gmail.com
+2021-07-31T05:56:00.512645+00:00 heroku[web.1]: Starting process with command `python manage.py runserver 0.0.0.0:8000`
+2021-07-31T05:56:04.438993+00:00 app[web.1]: Watching for file changes with StatReloader
+2021-07-31T05:56:04.439391+00:00 app[web.1]: Performing system checks...
+2021-07-31T05:56:04.439392+00:00 app[web.1]:
+2021-07-31T05:56:04.523877+00:00 app[web.1]: System check identified no issues (0 silenced).
+2021-07-31T05:56:04.623492+00:00 app[web.1]: July 31, 2021 - 05:56:04
+2021-07-31T05:56:04.623609+00:00 app[web.1]: Django version 3.2.5, using settings 'posts.settings'
+2021-07-31T05:56:04.623610+00:00 app[web.1]: Starting development server at http://0.0.0.0:8000/
+2021-07-31T05:56:04.623611+00:00 app[web.1]: Quit the server with CONTROL-C.
+2021-07-31T05:56:06.000000+00:00 app[api]: Build succeeded
+2021-07-31T05:57:01.074350+00:00 heroku[web.1]: Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
+2021-07-31T05:57:01.208651+00:00 heroku[web.1]: Stopping process with SIGKILL
+2021-07-31T05:57:01.293447+00:00 heroku[web.1]: Process exited with status 137
+2021-07-31T05:57:01.357839+00:00 heroku[web.1]: State changed from starting to crashed
+2021-07-31T05:57:01.396224+00:00 heroku[web.1]: State changed from crashed to starting
+2021-07-31T05:57:06.394077+00:00 heroku[web.1]: Starting process with command `python manage.py runserver 0.0.0.0:8000`
+2021-07-31T05:57:09.634493+00:00 app[web.1]: Watching for file changes with StatReloader
+2021-07-31T05:57:09.634805+00:00 app[web.1]: Performing system checks...
+2021-07-31T05:57:09.634806+00:00 app[web.1]: 
+2021-07-31T05:57:09.704269+00:00 app[web.1]: System check identified no issues (0 silenced).
+2021-07-31T05:57:09.779576+00:00 app[web.1]: July 31, 2021 - 05:57:09
+2021-07-31T05:57:09.779627+00:00 app[web.1]: Django version 3.2.5, using settings 'posts.settings'
+2021-07-31T05:57:09.779628+00:00 app[web.1]: Starting development server at http://0.0.0.0:8000/
+2021-07-31T05:57:09.779629+00:00 app[web.1]: Quit the server with CONTROL-C.
+2021-07-31T05:58:07.018482+00:00 heroku[web.1]: Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
+2021-07-31T05:58:07.067525+00:00 heroku[web.1]: Stopping process with SIGKILL
+2021-07-31T05:58:07.130520+00:00 heroku[web.1]: Process exited with status 137
+2021-07-31T05:58:07.280285+00:00 heroku[web.1]: State changed from starting to crashed
+2021-07-31T05:58:09.200578+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=rahul7677.herokuapp.com request_id=461c3bb1-61c5-4705-bafe-d2654344a5fe fwd="117.200.95.244" dyno= connect= service= status=503 bytes= protocol=https
+2021-07-31T05:58:10.560867+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=rahul7677.herokuapp.com request_id=c8bdc44e-08bf-41b1-a340-e05cf0327828 fwd="117.200.95.244" dyno= connect= service= status=503 bytes= protocol=https
+2021-07-31T05:58:12.329157+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=rahul7677.herokuapp.com request_id=1b0b68c3-9b91-4634-9e58-975b70aa7cce fwd="117.200.95.244" dyno= connect= service= status=503 bytes= protocol=https
+2021-07-31T05:58:14.000000+00:00 app[api]: Build started by user horsemangrey@gmail.com
+2021-07-31T05:58:43.638016+00:00 app[api]: Release v7 created by user horsemangrey@gmail.com
+2021-07-31T05:58:43.638016+00:00 app[api]: Deploy c1e6ebbe by user horsemangrey@gmail.com
+2021-07-31T05:58:43.903005+00:00 heroku[web.1]: State changed from crashed to starting
+2021-07-31T05:58:48.173499+00:00 heroku[web.1]: Starting process with command `python manage.py runserver`
+2021-07-31T05:58:52.065015+00:00 app[web.1]: Watching for file changes with StatReloader
+2021-07-31T05:58:52.065322+00:00 app[web.1]: Performing system checks...
+2021-07-31T05:58:52.065323+00:00 app[web.1]:
+2021-07-31T05:58:52.194350+00:00 app[web.1]: System check identified no issues (0 silenced).
+2021-07-31T05:58:52.423853+00:00 app[web.1]: July 31, 2021 - 05:58:52
+2021-07-31T05:58:52.424224+00:00 app[web.1]: Django version 3.2.5, using settings 'posts.settings'
+2021-07-31T05:58:52.424225+00:00 app[web.1]: Starting development server at http://127.0.0.1:8000/
+2021-07-31T05:58:52.424225+00:00 app[web.1]: Quit the server with CONTROL-C.
+2021-07-31T05:58:54.000000+00:00 app[api]: Build succeeded
+2021-07-31T05:59:48.383444+00:00 heroku[web.1]: Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
+2021-07-31T05:59:48.492192+00:00 heroku[web.1]: Stopping process with SIGKILL
+2021-07-31T05:59:48.595147+00:00 heroku[web.1]: Process exited with status 137
+2021-07-31T05:59:48.669613+00:00 heroku[web.1]: State changed from starting to crashed
+2021-07-31T05:59:49.876113+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=rahul7677.herokuapp.com request_id=d39af738-7abe-413b-a3ec-acec0b03c424 fwd="117.200.95.244" dyno= connect= service= status=503 bytes= protocol=https
+2021-07-31T05:59:50.324117+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=rahul7677.herokuapp.com request_id=761f4a0e-95a7-4a7a-a3d9-64de9dd28614 fwd="117.200.95.244" dyno= connect= service= status=503 bytes= protocol=https
+^CTerminate batch job (Y/N)? y
+
+C:\Users\Horseman\Desktop\blogs>git commit -am"chang eto gunicorn" 
+[master cc8b04d] chang eto gunicorn
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+C:\Users\Horseman\Desktop\blogs>git push heroku master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 366 bytes | 183.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Building source:
+remote:
+remote: -----> Building on the Heroku-20 stack
+remote: -----> Using buildpack: heroku/python
+remote: -----> Python app detected
+remote: -----> No Python version was specified. Using the same version as the last build: python-3.9.6
+remote:        To use a different version, see: https://devcenter.heroku.com/articles/python-runtimes
+remote: -----> Requirements file has been changed, clearing cached dependencies
+remote: -----> Installing python-3.9.6
+remote: -----> Installing pip 20.2.4, setuptools 47.1.1 and wheel 0.36.2      
+remote: -----> Installing SQLite3
+remote: -----> Installing requirements with pip
+remote:        Collecting Django
+remote:          Downloading Django-3.2.5-py3-none-any.whl (7.9 MB)
+remote:        Collecting gunicorn
+remote:          Downloading gunicorn-20.1.0-py3-none-any.whl (79 kB)
+remote:        Collecting sqlparse>=0.2.2
+remote:          Downloading sqlparse-0.4.1-py3-none-any.whl (42 kB)
+remote:        Collecting pytz
+remote:          Downloading pytz-2021.1-py2.py3-none-any.whl (510 kB)        
+remote:        Collecting asgiref<4,>=3.3.2
+remote:          Downloading asgiref-3.4.1-py3-none-any.whl (25 kB)
+remote:        Installing collected packages: sqlparse, pytz, asgiref, Django, gunicorn
+remote:        Successfully installed Django-3.2.5 asgiref-3.4.1 gunicorn-20.1.0 pytz-2021.1 sqlparse-0.4.1
+remote: -----> Skipping Django collectstatic since the env var DISABLE_COLLECTSTATIC is set.
+remote: -----> Discovering process types
+remote:        Procfile declares types -> web
+remote:
+remote: -----> Compressing...
+remote:        Done: 58.4M
+remote: -----> Launching...
+remote:        Released v8
+remote:        https://rahul7677.herokuapp.com/ deployed to Heroku
+remote:
+remote: Verifying deploy... done.
+To https://git.heroku.com/rahul7677.git
+   c1e6ebb..cc8b04d  master -> master
+
+C:\Users\Horseman\Desktop\blogs>git commit -am"update procfile"
+[master 4b03a8d] update procfile
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\Horseman\Desktop\blogs>git push heroku master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 310 bytes | 103.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> Building on the Heroku-20 stack
+remote: -----> Using buildpack: heroku/python
+remote: -----> Python app detected
+remote: -----> No Python version was specified. Using the same version as the last build: python-3.9.6
+remote:        To use a different version, see: https://devcenter.heroku.com/articles/python-runtimes
+remote: -----> No change in requirements detected, installing from cache      
+remote: -----> Using cached install of python-3.9.6
+remote: -----> Installing pip 20.2.4, setuptools 47.1.1 and wheel 0.36.2      
+remote: -----> Installing SQLite3
+remote: -----> Installing requirements with pip
+remote: -----> Skipping Django collectstatic since the env var DISABLE_COLLECTSTATIC is set.
+remote: -----> Discovering process types
+remote:        Procfile declares types -> web
+remote:
+remote: -----> Compressing...
+remote:        Done: 58.4M
+remote: -----> Launching...
+remote:        Released v9
+remote:        https://rahul7677.herokuapp.com/ deployed to Heroku
+remote:
+remote: Verifying deploy... done.
+To https://git.heroku.com/rahul7677.git
+   cc8b04d..4b03a8d  master -> master
+
+C:\Users\Horseman\Desktop\blogs>heroku run python manage.py migrate
+Running python manage.py migrate on ⬢ rahul7677... up, run.1463 (Free)Operations to perform:
+  Apply all migrations: admin, auth, blogs, contenttypes, sessions
+Running migrations:
+  No migrations to apply.
+
+C:\Users\Horseman\Desktop\blogs>git commit -am"allow hosts"     
+[master 11899ae] allow hosts
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\Horseman\Desktop\blogs>git push heroku master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 383 bytes | 191.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> Building on the Heroku-20 stack
+remote: -----> Using buildpack: heroku/python
+remote: -----> Python app detected
+remote: -----> No Python version was specified. Using the same version as the last build: python-3.9.6
+remote:        To use a different version, see: https://devcenter.heroku.com/articles/python-runtimes
+remote: -----> No change in requirements detected, installing from cache      
+remote: -----> Using cached install of python-3.9.6
+remote: -----> Installing pip 20.2.4, setuptools 47.1.1 and wheel 0.36.2      
+remote: -----> Installing SQLite3
+remote: -----> Installing requirements with pip
+remote: -----> Skipping Django collectstatic since the env var DISABLE_COLLECTSTATIC is set.
+remote: -----> Discovering process types
+remote:        Procfile declares types -> web
+remote:
+remote: -----> Compressing...
+remote:        Done: 58.4M
+remote: -----> Launching...
+remote:        Released v10
+remote:        https://rahul7677.herokuapp.com/ deployed to Heroku
+remote:
+remote: Verifying deploy... done.
+To https://git.heroku.com/rahul7677.git
+   4b03a8d..11899ae  master -> master
+
+C:\Users\Horseman\Desktop\blogs>heroku run python manage.py migrate
+Running python manage.py migrate on ⬢ rahul7677... up, run.9591 (Free)Operations to perform:
+  Apply all migrations: admin, auth, blogs, contenttypes, sessions
+Running migrations:
+  No migrations to apply.
+
+C:\Users\Horseman\Desktop\blogs>git commit -am"update settings"    
+[master 8a9b702] update settings
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\Horseman\Desktop\blogs>git push heroku master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 387 bytes | 193.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> Building on the Heroku-20 stack
+remote: -----> Using buildpack: heroku/python
+remote: -----> Python app detected
+remote: -----> No Python version was specified. Using the same version as the last build: python-3.9.6
+remote:        To use a different version, see: https://devcenter.heroku.com/articles/python-runtimes
+remote: -----> No change in requirements detected, installing from cache      
+remote: -----> Using cached install of python-3.9.6
+remote: -----> Installing pip 20.2.4, setuptools 47.1.1 and wheel 0.36.2      
+remote: -----> Installing SQLite3
+remote: -----> Installing requirements with pip
+remote: -----> $ python manage.py collectstatic --noinput
+remote:        Traceback (most recent call last):
+remote:          File "/tmp/build_501985d7/manage.py", line 22, in <module>   
+remote:            main()
+remote:          File "/tmp/build_501985d7/manage.py", line 18, in main       
+remote:            execute_from_command_line(sys.argv)
+remote:          File "/app/.heroku/python/lib/python3.9/site-packages/django/core/management/__init__.py", line 419, in execute_from_command_line
+remote:            utility.execute()
+remote:          File "/app/.heroku/python/lib/python3.9/site-packages/django/core/management/__init__.py", line 413, in execute
+remote:            self.fetch_command(subcommand).run_from_argv(self.argv)    
+remote:          File "/app/.heroku/python/lib/python3.9/site-packages/django/core/management/base.py", line 354, in run_from_argv
+remote:            self.execute(*args, **cmd_options)
+remote:          File "/app/.heroku/python/lib/python3.9/site-packages/django/core/management/base.py", line 395, in execute
+remote:            self.check(tags=self.requires_system_checks)
+remote:          File "/app/.heroku/python/lib/python3.9/site-packages/django/core/management/base.py", line 469, in check
+remote:            raise SystemCheckError(msg)
+remote:        django.core.management.base.SystemCheckError: SystemCheckError: System check identified some issues:
+remote:        ERRORS:
+remote:        ?: (staticfiles.E002) The STATICFILES_DIRS setting should not contain the STATIC_ROOT setting.
+remote:
+remote:  !     Error while running '$ python manage.py collectstatic --noinput'.
+remote:        See traceback above for details.
+remote:
+remote:        You may need to update application code to resolve this error. 
+remote:        Or, you can disable collectstatic for this application:        
+remote:
+remote:           $ heroku config:set DISABLE_COLLECTSTATIC=1
+remote:
+remote:        https://devcenter.heroku.com/articles/django-assets
+remote:  !     Push rejected, failed to compile Python app.
+remote: 
+remote:  !     Push failed
+remote: Verifying deploy...
+remote: 
+remote: !       Push rejected to rahul7677.
+remote:
+To https://git.heroku.com/rahul7677.git
+ ! [remote rejected] master -> master (pre-receive hook declined)
+error: failed to push some refs to 'https://git.heroku.com/rahul7677.git'     
+
+C:\Users\Horseman\Desktop\blogs>python manage.py collectstatic --noinput
+SystemCheckError: System check identified some issues:
+
+ERRORS:
+?: (staticfiles.E002) The STATICFILES_DIRS setting should not contain the STATIC_ROOT setting.
+
+C:\Users\Horseman\Desktop\blogs>python manage.py collectstatic --noinput
+
+128 static files copied to 'C:\Users\Horseman\Desktop\blogs\static'.
+
+C:\Users\Horseman\Desktop\blogs>git commit -am"update settings"
+[master d711214] update settings
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\Horseman\Desktop\blogs>git push heroku master              
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (10/10), 1.05 KiB | 357.00 KiB/s, done.
+Total 10 (delta 8), reused 0 (delta 0), pack-reused 0
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> Building on the Heroku-20 stack
+remote: -----> Using buildpack: heroku/python
+remote: -----> Python app detected
+remote: -----> No Python version was specified. Using the same version as the last build: python-3.9.6
+remote:        To use a different version, see: https://devcenter.heroku.com/articles/python-runtimes
+remote: -----> No change in requirements detected, installing from cache      
+remote: -----> Using cached install of python-3.9.6
+remote: -----> Installing pip 20.2.4, setuptools 47.1.1 and wheel 0.36.2      
+remote: -----> Installing SQLite3
+remote: -----> Installing requirements with pip
+remote: -----> $ python manage.py collectstatic --noinput
+remote:        128 static files copied to '/tmp/build_f28b4353/static'.       
+remote: 
+remote: -----> Discovering process types
+remote:        Procfile declares types -> web
+remote:
+remote: -----> Compressing...
+remote:        Done: 59M
+remote: -----> Launching...
+remote:        Released v12
+remote:        https://rahul7677.herokuapp.com/ deployed to Heroku
+remote:
+remote: Verifying deploy... done.
+To https://git.heroku.com/rahul7677.git
+   11899ae..d711214  master -> master
+
+C:\Users\Horseman\Desktop\blogs>heroku run python manage.py migrate
+Running python manage.py migrate on ⬢ rahul7677... up, run.8572 (Free)Operations to perform:
+  Apply all migrations: admin, auth, blogs, contenttypes, sessions
+Running migrations:
+  No migrations to apply.
+
+C:\Users\Horseman\Desktop\blogs>git commit -am"allow static" 
+[master 04455f5] allow static
+ 1 file changed, 4 insertions(+)
+
+C:\Users\Horseman\Desktop\blogs>git push heroku master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 495 bytes | 247.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> Building on the Heroku-20 stack
+remote: -----> Using buildpack: heroku/python
+remote: -----> Python app detected
+remote: -----> No Python version was specified. Using the same version as the last build: python-3.9.6
+remote:        To use a different version, see: https://devcenter.heroku.com/articles/python-runtimes
+remote: -----> No change in requirements detected, installing from cache      
+remote: -----> Using cached install of python-3.9.6
+remote: -----> Installing pip 20.2.4, setuptools 47.1.1 and wheel 0.36.2      
+remote: -----> Installing SQLite3
+remote: -----> Installing requirements with pip
+remote: -----> $ python manage.py collectstatic --noinput
+remote:        128 static files copied to '/tmp/build_5b96f7c9/static'.       
+remote: 
+remote: -----> Discovering process types
+remote:        Procfile declares types -> web
+remote:
+remote: -----> Compressing...
+remote:        Done: 59M
+remote: -----> Launching...
+remote:        Released v13
+remote:        https://rahul7677.herokuapp.com/ deployed to Heroku
+remote:
+remote: Verifying deploy... done.
+To https://git.heroku.com/rahul7677.git
+   d711214..04455f5  master -> master
+
+C:\Users\Horseman\Desktop\blogs>heroku run python manage.py migrate
+Running python manage.py migrate on ⬢ rahul7677... up, run.5624 (Free)Traceback (most recent call last):
+  File "/app/manage.py", line 22, in <module>
+    main()
+  File "/app/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/app/.heroku/python/lib/python3.9/site-packages/django/core/management/__init__.py", line 419, in execute_from_command_line
+    utility.execute()
+  File "/app/.heroku/python/lib/python3.9/site-packages/django/core/management/__init__.py", line 413, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/app/.heroku/python/lib/python3.9/site-packages/django/core/management/base.py", line 354, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/app/.heroku/python/lib/python3.9/site-packages/django/core/management/base.py", line 398, in execute
+    output = self.handle(*args, **options)
+  File "/app/.heroku/python/lib/python3.9/site-packages/django/core/management/base.py", line 89, in wrapped
+    res = handle_func(*args, **kwargs)
+  File "/app/.heroku/python/lib/python3.9/site-packages/django/core/management/commands/migrate.py", line 75, in handle
+    self.check(databases=[database])
+  File "/app/.heroku/python/lib/python3.9/site-packages/django/core/management/base.py", line 419, in check
+    all_issues = checks.run_checks(
+  File "/app/.heroku/python/lib/python3.9/site-packages/django/core/checks/registry.py", line 76, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/app/.heroku/python/lib/python3.9/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/app/.heroku/python/lib/python3.9/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/app/.heroku/python/lib/python3.9/site-packages/django/urls/resolvers.py", line 413, in check
+    messages.extend(check_resolver(pattern))
+  File "/app/.heroku/python/lib/python3.9/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/app/.heroku/python/lib/python3.9/site-packages/django/urls/resolvers.py", line 412, in check
+    for pattern in self.url_patterns:
+  File "/app/.heroku/python/lib/python3.9/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/app/.heroku/python/lib/python3.9/site-packages/django/urls/resolvers.py", line 598, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/app/.heroku/python/lib/python3.9/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/app/.heroku/python/lib/python3.9/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/app/.heroku/python/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 972, in _find_and_load_unlocked  
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 984, in _find_and_load_unlocked  
+ModuleNotFoundError: No module named '^static/(?P<path>'
+
+C:\Users\Horseman\Desktop\blogs>git commit -am"udpate"      
+[master fb8956d] udpate
+ 3 files changed, 5 insertions(+), 6 deletions(-)
+
+C:\Users\Horseman\Desktop\blogs>git push heroku master
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 604 bytes | 302.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> Building on the Heroku-20 stack
+remote: -----> Using buildpack: heroku/python
+remote: -----> Python app detected
+remote: -----> No Python version was specified. Using the same version as the last build: python-3.9.6
+remote:        To use a different version, see: https://devcenter.heroku.com/articles/python-runtimes
+remote: -----> Requirements file has been changed, clearing cached dependencies
+remote: -----> Installing python-3.9.6
+remote: -----> Installing pip 20.2.4, setuptools 47.1.1 and wheel 0.36.2      
+remote: -----> Installing SQLite3
+remote: -----> Installing requirements with pip
+remote:        Collecting Django
+remote:          Downloading Django-3.2.5-py3-none-any.whl (7.9 MB)
+remote:        Collecting gunicorn
+remote:          Downloading gunicorn-20.1.0-py3-none-any.whl (79 kB)
+remote:        Collecting whitenoise
+remote:          Downloading whitenoise-5.3.0-py2.py3-none-any.whl (19 kB)    
+remote:        Collecting pytz
+remote:          Downloading pytz-2021.1-py2.py3-none-any.whl (510 kB)        
+remote:        Collecting asgiref<4,>=3.3.2
+remote:          Downloading asgiref-3.4.1-py3-none-any.whl (25 kB)
+remote:        Collecting sqlparse>=0.2.2
+remote:          Downloading sqlparse-0.4.1-py3-none-any.whl (42 kB)
+remote:        Installing collected packages: pytz, asgiref, sqlparse, Django, gunicorn, whitenoise
+remote:        Successfully installed Django-3.2.5 asgiref-3.4.1 gunicorn-20.1.0 pytz-2021.1 sqlparse-0.4.1 whitenoise-5.3.0
+remote: -----> $ python manage.py collectstatic --noinput
+remote:        128 static files copied to '/tmp/build_9971ad4d/static', 406 post-processed.
+remote: 
+remote: -----> Discovering process types
+remote:        Procfile declares types -> web
+remote:
+remote: -----> Compressing...
+remote:        Done: 60.2M
+remote: -----> Launching...
+remote:        Released v14
+remote:        https://rahul7677.herokuapp.com/ deployed to Heroku
+remote:
+remote: Verifying deploy... done.
+To https://git.heroku.com/rahul7677.git
+   04455f5..fb8956d  master -> master
+
+C:\Users\Horseman\Desktop\blogs>heroku run python manage.py migrate
+Running python manage.py migrate on ⬢ rahul7677... up, run.5926 (Free)Operations to perform:
+  Apply all migrations: admin, auth, blogs, contenttypes, sessions
+Running migrations:
+  No migrations to apply.
+
+C:\Users\Horseman\Desktop\blogs>./run.sh
+'.' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Horseman\Desktop\blogs>./run.sh
+'.' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Horseman\Desktop\blogs>run.bat
+
+C:\Users\Horseman\Desktop\blogs>git add .
+warning: LF will be replaced by CRLF in run.bat.
+The file will have its original line endings in your working directory        
+
+C:\Users\Horseman\Desktop\blogs>git commit -am"Updated Release" 
+[master ce147d8] Updated Release
+ 1 file changed, 4 insertions(+)
+ create mode 100644 run.bat
+
+C:\Users\Horseman\Desktop\blogs>git push heroku master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 373 bytes | 186.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Compressing source files... done.
+Running migrations:
+  No migrations to apply.
+
+C:\Users\Horseman\Desktop\blogs>run
+warning: LF will be replaced by CRLF in run.bat.
+The file will have its original line endings in your working directory        [master 68ff9ce] Updated Release
+ 1 file changed, 1 insertion(+)Terminate batch job (Y/N)? y
+
+C:\Users\Horseman\Desktop\blogs>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

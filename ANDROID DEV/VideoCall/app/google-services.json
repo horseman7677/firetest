@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "841012864975",
+    "project_id": "horseman-video-call",
+    "storage_bucket": "horseman-video-call.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841012864975:android:2ba3364deb7cf7ba9ed4ba",
+        "android_client_info": {
+          "package_name": "com.horseman.videocall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "841012864975-vkpsjo23b5ijeja227r9o59jbiafc738.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0BcYRIf1RQtb8g1YzOPGA_UiiVi2jCAY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "841012864975-vkpsjo23b5ijeja227r9o59jbiafc738.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
