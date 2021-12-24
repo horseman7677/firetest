@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     Button btn;
     FirebaseDatabase rootNode;
     DatabaseReference reference;
-
+    //firetest 3
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
