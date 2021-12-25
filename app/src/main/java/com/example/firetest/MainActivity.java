@@ -22,13 +22,12 @@ public class MainActivity extends AppCompatActivity {
     Button btn;
     FirebaseDatabase rootNode;
     DatabaseReference reference;
-    //firetest 3
+    //firetest 4
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        data = findViewById(R.id.data);
         email = findViewById(R.id.email);
         phone = findViewById(R.id.phone);
         text = findViewById(R.id.ptext);
@@ -44,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
 
                 rootNode = FirebaseDatabase.getInstance();
                 reference = rootNode.getReference("users");
-                retriveData();
 
                 FetcherBase fetcherBase = new FetcherBase(email1,phone1,text1);
                 reference.child(phone1).setValue(fetcherBase);
@@ -54,20 +52,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void retriveData() {
-        reference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String val = snapshot.getValue(String.class);
 
-                data.setText(val);
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(MainActivity.this, "error...", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
 
 }
